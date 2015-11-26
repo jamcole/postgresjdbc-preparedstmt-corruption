@@ -1,7 +1,8 @@
 This maven project shows the server side prepared statement bug in the postgres jdbc driver 9.4-1205-jdbc42 regarding numeric returns being off by 10x
 
-Change configuration in Config.java
+Bug: https://github.com/pgjdbc/pgjdbc/issues/433
 
+Change configuration in Config.java
 It connects to postgres on localhost using postgres:postgres but it doesn't actually need to use any tables.
 
 Adjust prepareThreshold=3 on the jdbc url to see the problem in action.
