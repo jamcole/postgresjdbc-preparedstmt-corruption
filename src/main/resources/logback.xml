@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="false">
+	<logger name="com.trendnation" level="TRACE" />
+
+	<property scope="context" name="logback.pattern.color" value="%green(%d{ISO8601}) %highlight(%level) %magenta([%contextName %thread]) %cyan(%logger{15}) %magenta(\\(%F:%L\\)) %yellow(%mdc) %replace(%message){'SESSIONID=[^,; \n]+', 'SESSIONID=###HIDDEN###'}%n" />
+	
+	<property scope="context" name="logback.pattern.nocolor" value="%d{ISO8601} %level [%contextName %thread] %logger{15} \\(%F:%L\\) %mdc %replace(%message){'SESSIONID=[^,; \n]+', 'SESSIONID=###HIDDEN###'}%n" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${logback.pattern.color}</pattern>
+			
+			<!-- If you don't like colors in your terminal -->
+			<!-- <pattern>${logback.pattern.nocolor}</pattern> -->
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

@@ -1,0 +1,61 @@
+#Build Leftovers
+classes
+build/
+deploy/
+target/
+*.ear
+bin/
+
+#Other Crap
+temp/
+logs/
+*.log
+*~
+
+*.error
+
+#Leftover by git merges sometimes
+*.orig
+
+#Eclipse Crap, at least they're dotfiles
+.project
+.classpath
+.settings/
+.externalToolBuilders
+.springBeans
+.checkstyle
+.pmd
+.pmdruleset.xml
+
+#Oracle Jdev and Portal Crap
+*_diagram*
+jdeveloper
+modules
+oracle_common
+wlserver*
+portal/MerchPortal/mds
+web/*/resourcebundles
+
+#Netbeans Crap
+nb-configuration.xml
+nbactions.xml
+profiles.xml
+context.xml
+catalog.xml
+
+#Jetbrains IDEA Crap
+*.iml
+*.imr
+*.ipr
+*.iws
+overlays
+
+#Jars for Jdev WebApp
+external/
+
+#Override files, the only purposeful thing in here!?
+release.properties
+*.override.properties
+*.local.properties
+pom.xml.*
+
